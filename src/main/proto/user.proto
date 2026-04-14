@@ -6,8 +6,14 @@ option java_multiple_files = true;
 option java_package = "com.example.grpc";
 
 service UserService {
+  // Существующие методы
   rpc GetUser (UserRequest) returns (UserResponse);
   rpc CreateUser (CreateUserRequest) returns (UserResponse);
+
+  // Новые методы
+  rpc UpdateUser (UpdateUserRequest) returns (UserResponse);
+  rpc DeleteUser (UserRequest) returns (DeleteUserResponse);
+  rpc ListUsers (EmptyRequest) returns (ListUsersResponse);
 }
 
 message UserRequest {
@@ -19,8 +25,25 @@ message CreateUserRequest {
   string email = 2;
 }
 
+message UpdateUserRequest {
+  int32 user_id = 1;
+  string name = 2;
+  string email = 3;
+}
+
 message UserResponse {
   int32 user_id = 1;
   string name = 2;
   string email = 3;
 }
+
+message DeleteUserResponse {
+  bool success = 1;
+  string message = 2;
+}
+
+message ListUsersResponse {
+  repeated UserResponse users = 1;
+}
+
+message EmptyRequest {}
