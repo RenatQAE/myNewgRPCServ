@@ -11,14 +11,16 @@ git clone https://github.com/RenatQAE/myNewgRPCServ
 4.Откройте Postman и создайте gRPC запрос:
 
 **метод UserService.CreateUser**
-```{
+указываем message:
+```
+{
   "name": "Alice",
   "email": "alice@example.com"
 }
 ```
 
 **метод UserService.GetUser**
-указываешь message:
+указываем message:
 ```
 {
   "user_id": 1
