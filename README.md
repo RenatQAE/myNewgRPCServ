@@ -8,18 +8,20 @@ git clone https://github.com/RenatQAE/myNewgRPCServ
 потом
 `mvn exec:java -Dexec.mainClass="com.example.grpc.GrpcServer"`
 
-4.Откройте Postman и создайте gRPC запрос
+4.Откройте Postman и создайте gRPC запрос:
+
+**метод UserService.CreateUser**
+```{
+  "name": "Alice",
+  "email": "alice@example.com"
+}
+```
+
 **метод UserService.GetUser**
 указываешь message:
 ```
 {
   "user_id": 1
-}
-```
-**метод UserService.CreateUser**
-```{
-  "name": "Alice",
-  "email": "alice@example.com"
 }
 ```
 
