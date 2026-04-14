@@ -30,6 +30,7 @@ git clone https://github.com/RenatQAE/myNewgRPCServ
 5.Имплементируйте Protobuf
 
 Нажмите Service definition => Import a proto.file => Choose a File => Выбрать user.proto => Import as API => Create a New API**
+
 6.В адресную строку вводите localhost:9090
 
 7.Выбирайте метод, который хотите использовать в Select a method
