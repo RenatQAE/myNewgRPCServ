@@ -27,6 +27,29 @@ git clone https://github.com/RenatQAE/myNewgRPCServ
 }
 ```
 
+**метод UserService.UpdateUser**
+```
+{
+  "user_id": 1,
+  "name": "Новое имя",
+  "email": "new-email@example.com"
+}
+```
+
+**метод UserService.DeleteUser**
+
+```
+{}
+```
+
+**метод UserService.ListOfUsers**
+
+```
+{}
+```
+
+
+
 5.Имплементируйте Protobuf
 
 Нажмите Service definition => Import a proto.file => Choose a File => Выбрать user.proto => Import as API => Create a New API**
